@@ -60,6 +60,9 @@ public class CashTransactionService {
     public List<CashTransaction> getTransactionsByInvoiced(boolean invoiced) {
         return cashTransactionRepository.findByInvoiced(invoiced);
     }
+    public Optional<CashTransaction> getCashTransactionById(Long id) {
+        return cashTransactionRepository.findById(id);
+    }
 
 
 }
